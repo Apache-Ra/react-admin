@@ -8,7 +8,7 @@ export default class FooterBar extends Component {
 
     render() {
         return (
-            <div>
+            <div id="FooterBar">
                 Ant Design ©2018 Created by Ant UED
             </div>
         )

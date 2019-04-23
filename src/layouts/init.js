@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Layout, Menu,} from 'antd';
+import {Layout,} from 'antd';
+import RouterIndex from '../router/index'
 import HeaderBar from '../layouts/HeaderBar/headerBar';
 import NavBar from '../layouts/NavBar/navBar'
 import FooterBar from "../layouts/FooterBar/footerBar";
@@ -7,10 +8,7 @@ import BreadcrumbBar from '../layouts/BreadcrumbBar/breadcrumbBar';
 import 'antd/dist/antd.css'
 
 
-const {Header, Content, Footer, Sider,} = Layout;
-
-const SubMenu = Menu.SubMenu;
-
+const {Content, Sider,} = Layout;
 
 class Init extends Component {
 
@@ -19,7 +17,6 @@ class Init extends Component {
     };
 
     onCollapse = (collapsed) => {
-        console.log(collapsed);
         this.setState({collapsed});
     }
 
@@ -34,8 +31,7 @@ class Init extends Component {
                                collapsed={this.state.collapsed}
                                onCollapse={this.onCollapse}><NavBar></NavBar></Sider>
                         <Layout>
-                            <BreadcrumbBar></BreadcrumbBar>
-                            <Content>Content</Content>
+                            <Content id="Content"><RouterIndex/></Content>
                             <FooterBar></FooterBar>
                         </Layout>
 

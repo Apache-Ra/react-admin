@@ -1,5 +1,109 @@
-#HeaderBar{
-  height: 50px;
-  background: #444;
+#HeaderBar {
+  height: 60px;
+  background: #001529;
+  margin-bottom: 1px;
   color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+
+  .logo {
+    width: 400px;
+    display: flex;
+    height: 60px;
+    align-items: center;
+
+    .img {
+      width: 60px;
+    }
+
+    .txt {
+      font-size: 19px;
+      font-weight: bold;
+      text-shadow: 1px 2px 3px #CCC;
+      animation: span 10s infinite 10s linear;
+    }
+
+    img {
+      max-height: 100%;
+      animation: logo-spin infinite 10s linear;
+    }
+
+    @keyframes span {
+      10% {
+        text-shadow: -2px 2px 3px red;
+      }
+      50% {
+        text-shadow: -1px 2px 3px #61dafb;
+      }
+      70% {
+        text-shadow: 0 2px 3px #FFF;
+      }
+      100% {
+        text-shadow: 1px 2px 3px greenyellow;
+      }
+    }
+
+    @keyframes logo-spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .nav {
+    height: 60px;
+    line-height: 60px;
+    flex: 0 0 50%;
+  }
+
+  .ant-menu-item {
+  }
+
+  .ant-menu-item-selected {
+    background: none;
+    border-bottom: 2px solid #1890ff;
+    margin-top: -3px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .userInfo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    p {
+      margin-bottom: 0
+    }
+
+    .userImg {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+
+      img {
+        max-height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .userTxt {
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  }
+
+}
+
+.HeaderBar {
+  .menu-group {
+    ul li {
+      list-style: none;
+    }
+  }
 }

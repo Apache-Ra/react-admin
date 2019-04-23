@@ -9,7 +9,7 @@ export default class BreadcrumbBar extends Component {
 
     render() {
         return (
-            <div>
+            <div id="BreadcrumbBar">
                 <Breadcrumb>
                     <Breadcrumb.Item href="">
                         <Icon type="home" />
